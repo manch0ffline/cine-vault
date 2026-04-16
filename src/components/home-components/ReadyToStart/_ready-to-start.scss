@@ -1,0 +1,90 @@
+.ready-to-start {
+  width: min(100%, 980px);
+  padding: 66px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-inline: auto;
+  position: relative;
+  z-index: 100;
+  overflow: hidden;
+
+  &__content {
+    width: 75%;
+    margin-inline: auto;
+
+    & h2 {
+      font-size: 50px;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    & p {
+      font-size: 18px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: calc(50% - 200px);
+    background-color: #f1f5fc;
+    height: 400px;
+    width: 400px;
+    border-radius: 35% 45% 25% 70%;
+    transform: rotate(100deg);
+
+    z-index: -10;
+  }
+
+  @include belowLaptop {
+    &__content {
+      width: 82%;
+
+      & h2 {
+        font-size: clamp(36px, 5vw, 44px);
+      }
+    }
+
+    &::after {
+      height: 340px;
+      width: 340px;
+      left: calc(50% - 170px);
+    }
+  }
+
+  @include belowTablet {
+    padding: 48px 18px;
+
+    &__content {
+      width: 100%;
+      gap: 1rem !important;
+
+      & h2 {
+        font-size: clamp(30px, 9vw, 38px);
+      }
+
+      & p {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+    }
+
+    &::after {
+      height: 260px;
+      width: 260px;
+      left: calc(50% - 130px);
+      bottom: -70px;
+    }
+  }
+
+  @include belowMobile {
+    padding: 36px 14px;
+
+    &__content {
+      & h2 {
+        font-size: 28px;
+      }
+    }
+  }
+}

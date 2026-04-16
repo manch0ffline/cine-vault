@@ -1,0 +1,54 @@
+.footer {
+  &__company-info {
+    & p {
+      margin: 0;
+      color: $highlight-grey-color;
+      line-height: 1.5;
+    }
+  }
+
+  &__links {
+    & h4 {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    & a {
+      font-weight: 400;
+      font-size: 16px;
+      color: $highlight-grey-color;
+      width: fit-content;
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+
+  @include belowTablet {
+    &__company-info {
+      text-align: center;
+      align-items: center;
+    }
+
+    &__links {
+      & a {
+        width: 100%;
+      }
+    }
+  }
+
+  @include belowMobile {
+    &__links {
+      text-align: left;
+
+      & h4 {
+        font-size: 15px;
+      }
+
+      & a {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.home-page {
+  & header {
+    min-height: 100dvh;
+
+    h1 {
+      font-size: 80px;
+      font-weight: 700;
+      line-height: 1.05;
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.45;
+    }
+  }
+
+  &__hero {
+    padding-block: 48px;
+  }
+
+  &__lead {
+    width: min(75%, 760px);
+  }
+
+  &_buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include belowLaptop {
+    & header {
+      h1 {
+        font-size: clamp(44px, 8vw, 64px);
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @include belowTablet {
+    & header {
+      h1 {
+        font-size: clamp(34px, 9.5vw, 46px);
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    &__hero {
+      padding-inline: 20px !important;
+      padding-block: 28px;
+    }
+
+    &__lead {
+      width: 100%;
+    }
+  }
+
+  @include belowMobile {
+    &_buttons {
+      width: 100%;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

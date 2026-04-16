@@ -1,0 +1,92 @@
+// @use "./base/variables" as *;
+
+@mixin onMobile {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin onLaptop {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin onWidescreen {
+  @media (min-width: $breakpoint-2xl) {
+    @content;
+  }
+}
+
+@mixin belowMobile {
+  @media (max-width: #{$breakpoint-sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin belowTablet {
+  @media (max-width: #{$breakpoint-md - 1px}) {
+    @content;
+  }
+}
+
+@mixin belowLaptop {
+  @media (max-width: #{$breakpoint-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin belowDesktop {
+  @media (max-width: #{$breakpoint-xl - 1px}) {
+    @content;
+  }
+}
+
+// диапазон между двумя брейкпоинтами
+@mixin between($min, $max) {
+  @media (min-width: $min) and (max-width: #{$max - 1px}) {
+    @content;
+  }
+}
+
+@mixin textUnderline($state: false) {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: $main-color;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+
+    @if $state {
+      transform: scaleX(1);
+    }
+  }
+}
+
+@mixin underlineOnHover {
+  position: relative;
+
+  @include textUnderline;
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}

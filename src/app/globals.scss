@@ -1,0 +1,52 @@
+//Base styles
+@import "@/src/styles/variables.scss";
+@import "@/src/styles/icon";
+@import "@/src/styles/mixines.scss";
+@import "@/src/styles/input";
+
+// Custom global styles
+@import "@/src/styles/button";
+
+//Pages Styles
+@import "@/src/styles/pages/login";
+
+// Components
+@import "@/src/components/TopBar/top-bar";
+@import "@/src/components/Logo/logo";
+@import "@/src/components/SectionBlock/section-block";
+
+//Home page components
+@import "./home-page";
+@import "@/src/components/home-components/Features/features";
+@import "@/src/components/home-components/CuratedLists/curated-lists";
+@import "@/src/components/home-components/ReadyToStart/ready-to-start";
+@import "@/src/components/home-components/Footer/footer";
+@import "@/src/components/loader/loader";
+
+//Layouts
+@import "@/src/styles/layouts/auth-layout";
+@import "@/src/styles/layouts/authorized-layout";
+@import "@/src/styles/pages/movies";
+
+* {
+  box-sizing: border-box;
+  color: $main-text-color;
+}
+
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+
+  min-width: 320px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: $main-text-color;
+}

@@ -1,0 +1,21 @@
+@use "sass:color";
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+$main-color: #0066ff;
+$grey-color: #e5e2e1;
+$light-grey-color: #eae7e7;
+$highlight-grey-color: #424656;
+$main-text-color: #1c1b1b;
+$text-secondary-color: #fcf9f8;
+
+$light-grey-bg: #f6f3f2;
+
+//Hover colors
+$main-color-hover: #297fffe8;
+$grey-color-hover: color.adjust($grey-color, $lightness: -4%);

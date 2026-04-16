@@ -1,0 +1,26 @@
+input {
+  display: inline-block;
+  padding: 18px 20px;
+  width: 100%;
+  max-width: 600px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: $light-grey-color;
+  outline: none;
+  border: none;
+
+  &::placeholder {
+    color: $main-text-color;
+    opacity: 0.6;
+  }
+}
+
+.my-input {
+  flex: 1; 
+  &__title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #424656;
+    letter-spacing: 0.7px;
+  }
+}

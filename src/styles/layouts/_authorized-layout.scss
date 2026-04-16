@@ -1,0 +1,113 @@
+.authorized-layout {
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 100% 0%, #dbe8ff 0, transparent 50%),
+    radial-gradient(circle at 0% 100%, #ffe8da 0, transparent 55%), #f6f7fb;
+
+  &__header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(28, 27, 27, 0.08);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.82);
+
+    @include onLaptop {
+      grid-template-columns: 1fr auto auto;
+      padding: 20px 32px;
+    }
+  }
+
+  &__brand {
+    p {
+      margin: 0;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #5c6374;
+    }
+
+    h1 {
+      margin: 4px 0 0;
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 800;
+      line-height: 1.15;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__nav-item {
+    border-radius: 999px;
+    padding: 9px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334;
+    border: 1px solid rgba(51, 51, 68, 0.18);
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: translateY(-1px);
+      border-color: #222;
+    }
+
+    &.is-active {
+      color: #fff;
+      background-color: #111827;
+      border-color: #111827;
+    }
+  }
+
+  &__user-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    @include onLaptop {
+      justify-content: flex-end;
+    }
+  }
+
+  &__user-email {
+    max-width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #4b5563;
+    font-size: 14px;
+  }
+
+  &__logout {
+    border-radius: 12px;
+    border: 1px solid rgba(17, 24, 39, 0.2);
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #111827;
+      color: #fff;
+    }
+  }
+
+  &__content {
+    padding: 24px 20px 36px;
+
+    @include onLaptop {
+      padding: 28px 32px 48px;
+    }
+  }
+}

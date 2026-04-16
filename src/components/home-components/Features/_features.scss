@@ -1,0 +1,54 @@
+.features {
+  &__block {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+
+    & h4 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    & {
+      font-size: 16px;
+    }
+  }
+
+  &__icon-block {
+    width: fit-content;
+    padding: 15px;
+    background-color: #e6eefa;
+    border-radius: 10px;
+  }
+
+  @include belowLaptop {
+    &__block {
+      padding: 28px;
+    }
+  }
+
+  @include belowTablet {
+    &__block {
+      padding: 24px;
+
+      & h4 {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @include belowMobile {
+    &__block {
+      padding: 20px;
+
+      & h4 {
+        font-size: 20px;
+      }
+
+      & p {
+        margin: 0;
+        font-size: 15px;
+      }
+    }
+  }
+}

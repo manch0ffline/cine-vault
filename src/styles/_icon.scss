@@ -1,0 +1,30 @@
+.icon {
+  width: 20px !important;
+  height: 20px !important;
+  flex-shrink: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &.smart-filtering {
+    background-image: url("../styles/imgs/icons/smart-filtering-icon.svg");
+  }
+  &.detailed-catalog {
+    background-image: url("../styles/imgs/icons/detailed-catalog-icon.svg");
+  }
+  &.personal-watchlist {
+    background-image: url("../styles/imgs/icons/personal-watchlist-icon.svg");
+  }
+  &.comp-icon-1 {
+    background-image: url("../styles/imgs/icons/comp-icon-1.svg");
+  }
+  &.comp-icon-2 {
+    background-image: url("../styles/imgs/icons/comp-icon-2.svg");
+  }
+  &.comp-icon-3 {
+    background-image: url("../styles/imgs/icons/comp-icon-3.svg");
+  }
+  &.comp-icon-4 {
+    background-image: url("../styles/imgs/icons/comp-icon-4.svg");
+  }
+}
