@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/Inception.png",
+        url: "/images/preview.png",
         width: 1200,
         height: 630,
         alt: "CineVault",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CineVault",
     description: "Your Personal Movie Space",
-    images: ["/images/Inception.png"],
+    images: ["/images/preview.png"],
   },
 
   icons: {
