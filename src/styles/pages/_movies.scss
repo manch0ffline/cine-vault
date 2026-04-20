@@ -242,18 +242,30 @@
   &__pagination {
     margin-top: 22px;
     display: flex;
-    gap: 10px;
+    gap: 6px;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+
+    @include onMobile {
+      gap: 10px;
+    }
 
     > button,
     .movies-page__page-list button {
       border-radius: 10px;
       border: 1px solid rgba(17, 24, 39, 0.2);
       background-color: #fff;
-      padding: 9px 12px;
+      padding: 7px 8px;
+      font-size: 13px;
       font-weight: 700;
       cursor: pointer;
+      white-space: nowrap;
+
+      @include onMobile {
+        padding: 9px 12px;
+        font-size: 14px;
+      }
 
       &:disabled {
         opacity: 0.45;
@@ -269,7 +281,28 @@
 
   &__page-list {
     display: flex;
-    gap: 7px;
+    gap: 5px;
+
+    @include onMobile {
+      gap: 7px;
+    }
+  }
+
+  &__pagination-full {
+    display: none;
+
+    @include onMobile {
+      display: inline;
+    }
+  }
+
+  &__pagination-short {
+    display: inline;
+    font-size: 16px;
+
+    @include onMobile {
+      display: none;
+    }
   }
 }
 

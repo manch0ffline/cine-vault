@@ -28,16 +28,20 @@ function MoviesPagination({ currentPage, totalPages, setPage }: Props) {
         type="button"
         onClick={() => setPage(1)}
         disabled={currentPage <= 1}
+        aria-label="First page"
       >
-        First
+        <span className="movies-page__pagination-full">First</span>
+        <span className="movies-page__pagination-short">«</span>
       </button>
 
       <button
         type="button"
         onClick={() => setPage((prev) => Math.max(1, prev - 1))}
         disabled={currentPage <= 1}
+        aria-label="Previous page"
       >
-        Previous
+        <span className="movies-page__pagination-full">Previous</span>
+        <span className="movies-page__pagination-short">‹</span>
       </button>
 
       <div className="movies-page__page-list" aria-label="Pagination pages">
@@ -58,16 +62,20 @@ function MoviesPagination({ currentPage, totalPages, setPage }: Props) {
         type="button"
         onClick={() => setPage((prev) => Math.min(totalPages, prev + 1))}
         disabled={currentPage >= totalPages}
+        aria-label="Next page"
       >
-        Next
+        <span className="movies-page__pagination-full">Next</span>
+        <span className="movies-page__pagination-short">›</span>
       </button>
 
       <button
         type="button"
         onClick={() => setPage(totalPages)}
         disabled={currentPage >= totalPages}
+        aria-label="Last page"
       >
-        Last
+        <span className="movies-page__pagination-full">Last</span>
+        <span className="movies-page__pagination-short">»</span>
       </button>
     </div>
   );

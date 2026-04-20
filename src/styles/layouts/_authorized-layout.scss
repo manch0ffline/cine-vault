@@ -8,17 +8,22 @@
     position: sticky;
     top: 0;
     z-index: 10;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    gap: 12px;
+    padding: 14px 16px;
     border-bottom: 1px solid rgba(28, 27, 27, 0.08);
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.82);
 
+    @include onMobile {
+      padding: 16px 20px;
+    }
+
     @include onLaptop {
-      grid-template-columns: 1fr auto auto;
+      gap: 16px;
       padding: 20px 32px;
     }
   }
@@ -26,15 +31,19 @@
   &__brand {
     p {
       margin: 0;
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: #5c6374;
+
+      @include onMobile {
+        font-size: 12px;
+      }
     }
 
     h1 {
-      margin: 4px 0 0;
-      font-size: clamp(20px, 3vw, 28px);
+      margin: 2px 0 0;
+      font-size: clamp(17px, 3vw, 28px);
       font-weight: 800;
       line-height: 1.15;
     }
@@ -43,17 +52,27 @@
   &__nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    align-items: center;
+    gap: 6px;
+
+    @include onMobile {
+      gap: 8px;
+    }
   }
 
   &__nav-item {
     border-radius: 999px;
-    padding: 9px 14px;
-    font-size: 14px;
+    padding: 7px 12px;
+    font-size: 13px;
     font-weight: 600;
     color: #334;
     border: 1px solid rgba(51, 51, 68, 0.18);
     transition: all 0.2s ease;
+
+    @include onMobile {
+      padding: 9px 14px;
+      font-size: 14px;
+    }
 
     &:hover {
       transform: translateY(-1px);
@@ -90,12 +109,17 @@
   &__logout {
     border-radius: 12px;
     border: 1px solid rgba(17, 24, 39, 0.2);
-    padding: 10px 16px;
-    font-size: 14px;
+    padding: 7px 12px;
+    font-size: 13px;
     font-weight: 700;
     background-color: #fff;
     cursor: pointer;
     transition: all 0.2s ease;
+
+    @include onMobile {
+      padding: 10px 16px;
+      font-size: 14px;
+    }
 
     &:hover {
       background-color: #111827;
