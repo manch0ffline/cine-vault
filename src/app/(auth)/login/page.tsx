@@ -66,7 +66,7 @@ function Login() {
           </button>
         </form>
         <div className="login__form__actions mt-4 d-flex justify-content-between align-items-center">
-          <Link href="#" className="text-decoration-none btn p-0">
+          <Link href="/forgot-password" className="text-decoration-none btn p-0">
             Forgot Password?
           </Link>
           <span className="d-flex align-items-center gap-1">
